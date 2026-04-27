@@ -1,6 +1,9 @@
 const object = document.getElementById("object");
-let objectColor = false;
+let movingObject = false;
+console.log(movingObject);
 object.addEventListener("click", () => {
-    objectColor = !objectColor;
-    object.style.backgroundColor = objectColor ? "blue" : "rgb(39, 213, 39)";
+    movingObject = !movingObject;
+    console.log(movingObject);
+    movingObject ? object.classList.add("is-active") :
+        object.classList.remove("is-active");
 });
