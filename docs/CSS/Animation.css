@@ -14,13 +14,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#object.is-active {
     animation: rotation 1s infinite;
 }
 
 #container div span {
     display: block;
     font-size: 100px;
-    /* animation: rotationtext  4s infinite; */
+    animation: rotationtext  4s infinite;
 }
 
 @keyframes rotation {
