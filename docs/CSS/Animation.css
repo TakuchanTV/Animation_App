@@ -14,9 +14,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #27d527
+
 }
 #object.is-active {
     animation: rotation 1s infinite;
+    background-color:#e5b413
+}
+
+#object.rev_is-active {
+    animation: revrotation 1s infinite;
+    background-color:#3cacc0d2
 }
 
 #container div span {
@@ -28,6 +36,11 @@
 
 }
 
+#Num1.rev_is-activenum1 {
+    animation: revrotationtext  1s infinite;
+
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -36,6 +49,7 @@
         transform: rotate(90deg);
     }
 }
+
 @keyframes rotationtext {
     0% {
         transform: rotate(0deg);
@@ -43,5 +57,26 @@
    
     100% {
         transform: rotate(-90deg);
+    }
+}
+
+@keyframes revrotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+
+
+@keyframes revrotationtext {
+    0% {
+        transform: rotate(0deg);
+    }
+   
+    100% {
+        transform: rotate(90deg);
     }
 }
