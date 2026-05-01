@@ -1,7 +1,5 @@
 const object = document.getElementById("object");
 const num1 = document.getElementById("Num1")
-// const btn1 = document.getElementById("btn1")
-// const btn2 = document.getElementById("btn2")
 let movingObject = false;
 let movingNum1 = false;
 
@@ -46,21 +44,19 @@ document.addEventListener("keydown", (e) => {
 });
 
 document.addEventListener("touchmove", (e) => {
-    if (e.keyCode === 32) {
-        rev_movingObject = !rev_movingNum1;
-        rev_movingObject ? object.classList.add("rev_is-active") :
-            object.classList.remove("rev_is-active");
+    rev_movingObject = !rev_movingNum1;
+    rev_movingObject ? object.classList.add("rev_is-active") :
+        object.classList.remove("rev_is-active");
 
-        rev_movingNum1 = !rev_movingNum1
-        console.log(movingNum1)
+    rev_movingNum1 = !rev_movingNum1
+    console.log(movingNum1)
 
-        if (rev_movingNum1) {
-            countUp()
-            num1.classList.add("rev_is-activenum1");
-        } else {
-            clearInterval(intervalId);
-            num1.classList.remove("rev_is-activenum1");
-        }
+    if (rev_movingNum1) {
+        countUp()
+        num1.classList.add("rev_is-activenum1");
+    } else {
+        clearInterval(intervalId);
+        num1.classList.remove("rev_is-activenum1");
     }
 });
 
@@ -96,19 +92,6 @@ const countUp = () => {
         count = 1;
     }
 };
-
-
-// btn1.addEventListener("click", () => {
-//     if (!isRunning) {
-//         isRunning = true;
-//         countUp();
-//     }
-// });
-
-// btn2.addEventListener("click", () => {
-//     clearTimeout(intervalId);
-//     isRunning = false;
-// })
 
 
 
