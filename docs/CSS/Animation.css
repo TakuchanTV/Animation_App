@@ -8,36 +8,62 @@
     height: 600px;
 }
 
-#container div {
+#object {
     width: 300px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #27d527
-
 }
+
+#btndiv {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 80px;
+}
+
+#btndiv button{
+    padding: 3px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#rightbtn:hover{
+    background-color: #e5b413;
+}
+
+#leftbtn:hover{
+    background-color: #3cacc0d2 ;
+}
+
+
 #object.is-active {
     animation: rotation 1s infinite;
-    background-color:#e5b413
+    background-color: #e5b413
 }
 
 #object.rev_is-active {
     animation: revrotation 1s infinite;
-    background-color:#3cacc0d2
+    background-color: #3cacc0d2
 }
 
 #container div span {
     display: block;
     font-size: 100px;
 }
+
 #Num1.is-activenum1 {
-    animation: rotationtext  1s infinite;
+    animation: rotationtext 1s infinite;
 
 }
 
 #Num1.rev_is-activenum1 {
-    animation: revrotationtext  1s infinite;
+    animation: revrotationtext 1s infinite;
 
 }
 
@@ -45,6 +71,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(90deg);
     }
@@ -54,7 +81,7 @@
     0% {
         transform: rotate(0deg);
     }
-   
+
     100% {
         transform: rotate(-90deg);
     }
@@ -64,6 +91,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(-90deg);
     }
@@ -75,7 +103,7 @@
     0% {
         transform: rotate(0deg);
     }
-   
+
     100% {
         transform: rotate(90deg);
     }
