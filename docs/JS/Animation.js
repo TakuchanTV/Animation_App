@@ -10,6 +10,8 @@ let rev_movingObject = false;
 let rev_movingNum1 = false;
 
 console.log(movingNum1)
+stopbtn.style.display = "none"
+
 
 // object.addEventListener("click", () => {
 //     movingObject = !movingObject;
@@ -55,6 +57,8 @@ rightbtn.addEventListener("click", () => {
     countUp();
     rightbtn.style.display = "none"
     leftbtn.style.display = "none"
+    stopbtn.style.display = "block"
+
     // movingObject = !movingObject;
     // movingObject ? object.classList.add("is-active") :
     //     object.classList.remove("is-active");
@@ -79,6 +83,8 @@ leftbtn.addEventListener("click", (e) => {
     countUp();
     rightbtn.style.display = "none"
     leftbtn.style.display = "none"
+    stopbtn.style.display = "block"
+
     // rev_movingObject = !rev_movingNum1;
     // rev_movingObject ? object.classList.add("rev_is-active") :
     //     object.classList.remove("rev_is-active");
@@ -103,6 +109,7 @@ stopbtn.addEventListener("click", () => {
     clearInterval(intervalId);
     rightbtn.style.display = "block"
     leftbtn.style.display = "block"
+    stopbtn.style.display = "none"
 
 
 })
