@@ -27,9 +27,6 @@ rightbtn.addEventListener("click", () => {
     object.classList.add("is-active");
     num1.classList.add("is-activenum1");
     countUp();
-
-
-    console.log(music1.volume)
     rightbtn.style.display = "none"
     leftbtn.style.display = "none"
     stopbtn.style.display = "block"
@@ -57,8 +54,6 @@ stopbtn.addEventListener("click", () => {
     stopbtn.style.display = "none"
 })
 
-let isRunning = false;
-
 const countUp = () => {
     const text = num1.textContent = count;
     const audio = new Audio(audioArray[count - 1]);
@@ -69,7 +64,6 @@ const countUp = () => {
     if (count > 4) {
         count = 1;
     }
-
 };
 
 const countUp2 = () => {
@@ -82,4 +76,4 @@ const countUp2 = () => {
     if (count > 4) {
         count = 1;
     }
-}
+};
