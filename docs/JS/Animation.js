@@ -9,6 +9,7 @@ const music3 = document.getElementById("music3");
 const music4 = document.getElementById("music4");
 
 const audioArray = ["./Audio/「1」.mp3", "./Audio/「2」.mp3", "./Audio/「3」.mp3", "./Audio/「4（よん）」.mp3"];
+const audioArray2 = ["./Audio/「1」 (1).mp3", "./Audio/「2」 (1).mp3", "./Audio/「3」 (1).mp3", "./Audio/「4（よん）」 (1).mp3"];
 
 let count = 1;
 let intervalId;
@@ -39,7 +40,7 @@ leftbtn.addEventListener("click", (e) => {
     movingNum1 = true;
     object.classList.add("rev_is-active");
     num1.classList.add("rev_is-activenum1");
-    countUp();
+    countUp2();
     rightbtn.style.display = "none"
     leftbtn.style.display = "none"
     stopbtn.style.display = "block"
@@ -70,3 +71,15 @@ const countUp = () => {
     }
 
 };
+
+const countUp2 = () => {
+    const text = num1.textContent = count;
+    const audio2 = new Audio(audioArray2[count - 1]);
+    audio2.play()
+
+    count++
+    intervalId = setTimeout(countUp2, 1000);
+    if (count > 4) {
+        count = 1;
+    }
+}
