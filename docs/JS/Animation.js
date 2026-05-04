@@ -3,11 +3,6 @@ const num1 = document.getElementById("Num1");
 const rightbtn = document.getElementById("rightbtn");
 const leftbtn = document.getElementById("leftbtn");
 const stopbtn = document.getElementById("stopbtn");
-const music1 = document.getElementById("music1");
-const music2 = document.getElementById("music2");
-const music3 = document.getElementById("music3");
-const music4 = document.getElementById("music4");
-
 const audioArray = ["./Audio/「1」.mp3", "./Audio/「2」.mp3", "./Audio/「3」.mp3", "./Audio/「4（よん）」.mp3"];
 const audioArray2 = ["./Audio/「1」 (1).mp3", "./Audio/「2」 (1).mp3", "./Audio/「3」 (1).mp3", "./Audio/「4（よん）」 (1).mp3"];
 
