@@ -3,8 +3,8 @@ const num1 = document.getElementById("Num1");
 const rightbtn = document.getElementById("rightbtn");
 const leftbtn = document.getElementById("leftbtn");
 const stopbtn = document.getElementById("stopbtn");
-const audioArray = ["./Audio/「1」.mp3", "./Audio/「2」.mp3", "./Audio/「3」.mp3", "./Audio/「4（よん）」.mp3"];
-const audioArray2 = ["./Audio/「1」 (1).mp3", "./Audio/「2」 (1).mp3", "./Audio/「3」 (1).mp3", "./Audio/「4（よん）」 (1).mp3"];
+const audioArray = ["./Audio/audio_right/「1」.mp3","./Audio/audio_right/「2」.mp3","./Audio/audio_right/「3」.mp3","./Audio/audio_right/「4（よん）」.mp3"];
+const audioArray2 = ["./Audio/audio_left/「1」 (1).mp3", "./Audio/audio_left/「2」 (1).mp3", "./Audio/audio_left/「3」 (1).mp3", "./Audio/audio_left/「4（よん）」 (1).mp3"];
 
 let count = 1;
 let intervalId;
