@@ -16,7 +16,7 @@ let rev_movingNum1 = false;
 console.log(movingNum1)
 stopbtn.style.display = "none"
 
-rightbtn.addEventListener("click", () => {
+rightbtn.addEventListener("touchstart", () => {
     movingObject = true;
     movingNum1 = true;
     object.classList.add("is-active");
@@ -27,7 +27,7 @@ rightbtn.addEventListener("click", () => {
     stopbtn.style.display = "block"
 });
 
-leftbtn.addEventListener("click", (e) => {
+leftbtn.addEventListener("touchstart", (e) => {
     movingObject = true;
     movingNum1 = true;
     object.classList.add("rev_is-active");
@@ -38,7 +38,7 @@ leftbtn.addEventListener("click", (e) => {
     stopbtn.style.display = "block"
 });
 
-stopbtn.addEventListener("click", () => {
+stopbtn.addEventListener("touchstart", () => {
     object.classList.remove("rev_is-active");
     object.classList.remove("is-active");
     num1.classList.remove("rev_is-activenum1");
