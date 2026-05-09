@@ -16,29 +16,29 @@ let rev_movingNum1 = false;
 console.log(movingNum1)
 stopbtn.style.display = "none"
 
-rightbtn.addEventListener("touchstart", () => {
+rightbtn.addEventListener("click", () => {
+    countUp();
     movingObject = true;
     movingNum1 = true;
     object.classList.add("is-active");
     num1.classList.add("is-activenum1");
-    countUp();
     rightbtn.style.display = "none"
     leftbtn.style.display = "none"
     stopbtn.style.display = "block"
 });
 
-leftbtn.addEventListener("touchstart", (e) => {
+leftbtn.addEventListener("click", (e) => {
+    countUp2();
     movingObject = true;
     movingNum1 = true;
     object.classList.add("rev_is-active");
     num1.classList.add("rev_is-activenum1");
-    countUp2();
     rightbtn.style.display = "none"
     leftbtn.style.display = "none"
     stopbtn.style.display = "block"
 });
 
-stopbtn.addEventListener("touchstart", () => {
+stopbtn.addEventListener("click", () => {
     object.classList.remove("rev_is-active");
     object.classList.remove("is-active");
     num1.classList.remove("rev_is-activenum1");
