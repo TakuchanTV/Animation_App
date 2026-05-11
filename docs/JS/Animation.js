@@ -35,11 +35,11 @@ const unlockAudio = () => {
     if (audioUnlocked) return;
     audioUnlocked = true;
 
-    const silent = new Audio(
-        "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA"
-    );
+    // const silent = new Audio(
+    //     "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA"
+    // );
 
-    silent.play().then(() => silent.pause());
+    // silent.play().then(() => silent.pause());
 };
 
 let count = 1;
