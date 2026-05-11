@@ -35,9 +35,11 @@ const unlockAudio = () => {
     if (audioUnlocked) return;
     audioUnlocked = true;
 
-    [...audioRight, ...audioLeft].forEach(a => {
-        a.play().then(() => a.pause());
-    });
+    const silent = new Audio(
+        "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA"
+    );
+
+    silent.play().then(() => silent.pause());
 };
 
 let count = 1;
