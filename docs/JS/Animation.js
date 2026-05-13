@@ -39,16 +39,16 @@ const unlockAudio = () => {
     audioUnlocked = true;
 
     const silent = new Audio(
-        "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA"
+        "./Audio/playcheck/2s_441khz16bit.wav"
     );
 
-    const audioPlay = [...audioRight,...audioLeft].forEach((a) => {
-        a.play(() => a.pause());
-    })
+    // const audioPlay = [...audioRight,...audioLeft].forEach((a) => {
+    //     a.play(() => a.pause());
+    // })
 
-    // const plyaCheck = silent.play().then(() => silent.pause());
-    // console.log(plyaCheck);
-    console.log(audioPlay);
+    const playCheck = silent.play().then(() => silent.pause());
+    console.log(playCheck);
+    // console.log(audioPlay);
     
     
 };
