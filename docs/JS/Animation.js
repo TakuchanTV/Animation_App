@@ -4,6 +4,8 @@ const rightbtn = document.getElementById("rightbtn");
 const leftbtn = document.getElementById("leftbtn");
 const stopbtn = document.getElementById("stopbtn");
 
+
+
 const audioSrcRight = [
     "./Audio/audio_right/「1」.mp3",
     "./Audio/audio_right/「2」.mp3",
@@ -30,16 +32,25 @@ const audioLeft = audioSrcLeft.map((src) => {
     return a;
 });
 
+
 let audioUnlocked = false;
 const unlockAudio = () => {
     if (audioUnlocked) return;
     audioUnlocked = true;
 
-    // const silent = new Audio(
-    //     "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA"
-    // );
+    const silent = new Audio(
+        "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA"
+    );
 
-    // silent.play().then(() => silent.pause());
+    const audioPlay = [...audioRight,...audioLeft].forEach((a) => {
+        a.play(() => a.pause());
+    })
+
+    // const plyaCheck = silent.play().then(() => silent.pause());
+    // console.log(plyaCheck);
+    console.log(audioPlay);
+    
+    
 };
 
 let count = 1;
