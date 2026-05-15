@@ -47,9 +47,9 @@ loadingbtn.addEventListener("click", () => {
         loadingbtn.style.display = "none";
         rightbtn.style.display = "block";
         leftbtn.style.display = "block";
-        // audioPlay.forEach((a) => {
-        //     a.volume = 1;
-        // })
+        audioPlay.forEach((a) => {
+            a.play(() => a.pause());
+        })
     }, 2000)
 
 
@@ -82,6 +82,9 @@ let intervalId;
 
 
 const startRotation = (direction) => {
+    audioPlay.forEach((a) => {
+        a.volume = 1;
+    })
     if (direction === "right") {
         audioPlay.forEach((a) => {
             a.volume = 1;
