@@ -35,8 +35,9 @@ const audioLeft = audioSrcLeft.map((src) => {
     return a;
 });
 
+const audioPlay = [...audioRight, ...audioLeft];
+
 loadingbtn.addEventListener("click", () => {
-    const audioPlay = [...audioRight, ...audioLeft];
     audioPlay.forEach((a) => {
         a.volume = 0;
         a.play(() => a.pause());
@@ -46,9 +47,9 @@ loadingbtn.addEventListener("click", () => {
         loadingbtn.style.display = "none";
         rightbtn.style.display = "block";
         leftbtn.style.display = "block";
-        audioPlay.forEach((a) => {
-            a.volume = 1;
-        })
+        // audioPlay.forEach((a) => {
+        //     a.volume = 1;
+        // })
     }, 2000)
 
 
@@ -82,6 +83,9 @@ let intervalId;
 
 const startRotation = (direction) => {
     if (direction === "right") {
+        audioPlay.forEach((a) => {
+            a.volume = 1;
+        })
         object.classList.add("is-active");
         num1.classList.add("is-activenum1");
         countUpRight();
