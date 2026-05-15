@@ -3,8 +3,11 @@ const num1 = document.getElementById("Num1");
 const rightbtn = document.getElementById("rightbtn");
 const leftbtn = document.getElementById("leftbtn");
 const stopbtn = document.getElementById("stopbtn");
+const loadingbtn = document.getElementById("loadingbtn");
 
-
+stopbtn.style.display = "none"
+rightbtn.style.display = "none";
+leftbtn.style.display = "none";
 
 const audioSrcRight = [
     "./Audio/audio_right/「1」.mp3",
@@ -32,6 +35,25 @@ const audioLeft = audioSrcLeft.map((src) => {
     return a;
 });
 
+loadingbtn.addEventListener("click", () => {
+    const audioPlay = [...audioRight, ...audioLeft];
+    audioPlay.forEach((a) => {
+        a.volume = 0;
+        a.play(() => a.pause());
+    })
+
+    setTimeout(() => {
+        loadingbtn.style.display = "none";
+        rightbtn.style.display = "block";
+        leftbtn.style.display = "block";
+        audioPlay.forEach((a) => {
+            a.volume = 1;
+        })
+    }, 2000)
+
+
+
+})
 
 let audioUnlocked = false;
 const unlockAudio = () => {
@@ -49,14 +71,14 @@ const unlockAudio = () => {
     const playCheck = silent.play().then(() => silent.pause());
     console.log(playCheck);
     // console.log(audioPlay);
-    
-    
+
+
 };
 
 let count = 1;
 let intervalId;
 
-stopbtn.style.display = "none"
+
 
 const startRotation = (direction) => {
     if (direction === "right") {
