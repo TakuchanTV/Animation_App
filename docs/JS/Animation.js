@@ -113,13 +113,13 @@ const stopRotation = () => {
 
 //右回転
 rightbtn.addEventListener("click", () => {
-    unlockAudio();
+    // unlockAudio();
     startRotation("right")
 });
 
 //左回転
 leftbtn.addEventListener("click", () => {
-    unlockAudio();
+    // unlockAudio();
     startRotation("left")
 });
 
