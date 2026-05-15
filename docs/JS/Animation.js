@@ -40,7 +40,6 @@ const audioPlay = [...audioRight, ...audioLeft];
 loadingbtn.addEventListener("click", () => {
     audioPlay.forEach((a) => {
         a.volume = 0;
-        a.play(() => a.pause());
     })
 
     setTimeout(() => {
