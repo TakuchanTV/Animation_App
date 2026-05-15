@@ -44,6 +44,9 @@
     background-color: #e34c19d2 ;
 }
 
+#loadingbtn:hover{
+    background-color: aquamarine;
+}
 
 #object.is-active {
     animation: rotation 1s infinite;
